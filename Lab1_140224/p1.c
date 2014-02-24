@@ -3,15 +3,17 @@
 int fib(int);
 int count;
 
+
 int main(){
-	int n, input;
+	int n, in;
 	scanf("%d", &n);
 	while(n--){
 		count = 0;
-		scanf("%d", &input);
-		printf("n = %-2d, call %-3d times. \n", input, fib(input));
+		scanf("%d", &in);
+		fib(in);
+		printf("%d\n", count);
 	}
-	return 0;
+	return 0;   
 }
 
 int fib(int n){
@@ -21,4 +23,6 @@ int fib(int n){
 	if(n==1)
 		return 1;
 	return fib(n-1)+fib(n-2);
+
 }
+
